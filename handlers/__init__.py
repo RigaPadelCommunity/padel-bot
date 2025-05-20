@@ -1,4 +1,4 @@
-from .tournament import register_handlers as tournament_handlers
+from . import tournament
 
 def register_handlers(dp, bot):
-    tournament_handlers(dp, bot)
+    dp.include_router(tournament.router)
